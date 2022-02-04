@@ -1,0 +1,14 @@
+<html>
+    <head> 
+        <title>List of Pets</title>
+    </head>
+    <body>
+        
+        <h1>List of {{ pet_type }}</h1>
+        <ul>
+          {% for item in pets[pet_type] %}
+          <li><a href='/animals/{{ pet_type }}/{{ item["id"] }}'>{{ item["name"] }}</a></li>
+          {% endfor %}
+        </ul>
+    </body>
+</html>
